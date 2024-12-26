@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿰쿰이의 오늘의 운세</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>쿰쿰이의 운세</h1>
+
+    <div id="nicknameInput" class="input-area">
+      <input type="text" id="nickname" placeholder="닉네임을 입력해줘" />
+      <button onclick="startLoading()">입력</button>
+    </div>
+
+    <div id="loadingScreen" class="loading-screen" style="display: none;">
+      <img src="loading.gif" alt="로딩 중" />
+    </div>
+
+    <div id="fortuneContent" class="fortune-display" style="display: none;">
+      <p id="fortuneDisplay"></p>
+
+      <!-- 행운지수 추가 부분 -->
+      <div class="luck-info">
+        <h3>행운지수: <span id="luckPercent">40%</span></h3>
+        <div id="luckBar" class="luck-bar">
+          <div id="percentBar" class="percent-bar"></div>
+        </div>
+      </div>
+
+      <div id="luckColor" class="luck-info">
+        <h3>행운의 색: <span id="color"></span></h3>
+      </div>
+
+      <div id="luckNumber" class="luck-info">
+        <h3>행운의 숫자: <span id="number"></span></h3>
+      </div>
+
+      <div id="comment" class="luck-info">
+        <div class="comment-box">
+          <h3>오늘의 코멘트:</h3>
+          <p id="commentText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
